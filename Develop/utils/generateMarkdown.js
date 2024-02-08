@@ -40,7 +40,7 @@ function generateMarkdown(data) {
 
   ${data.description}
 
-  ## Table of Contents 🗒
+  ## Table of Contents
 
   - [Installations](#installations)
 
@@ -48,18 +48,14 @@ function generateMarkdown(data) {
   
   - [Contributors](#contributors)
 
-  - [Questions](#questions)
-
   ${renderLicenseLink(data.license)}
   
   ## Installations 
 
   Must install the following programs:
 
-  \`\`\`
   ${data.dependencies}
-  \`\`\`
-
+ 
   ## Usage
 
   ${data.usage}
