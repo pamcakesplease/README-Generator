@@ -15,4 +15,4 @@ SO THAT I can quickly create a professional README for a new project
 A README generator that can be used in the terminal to create a markdown file after answering a series of prompted questions
 
 ## Collaborators
-N/A
+Starter code provided by Grace Choi and Xander Rapstine.
