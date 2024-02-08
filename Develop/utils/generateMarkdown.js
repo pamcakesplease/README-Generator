@@ -7,18 +7,68 @@ function renderLicenseBadge(license) {
   return ""
 }
 
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== "None") {
+    return (
+      `* [License](#license-📛)`
+    )
+  }
+  return ""
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== "None") {
+    return (
+   `## License 
+
+     Licensed under the ${license} license.`
+    )
+  }
+  return ""
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
+
+  ## Description
+
+  ${data.description}
+
+  ## Table of Contents 🗒
+
+  - [Installations](#installations)
+
+  - [Usage](#usage)
+  
+  - [Contributors](#contributors)
+
+  - [Questions](#questions)
+
+  ${renderLicenseLink(data.license)}
+  
+  ## Installations 
+
+  Must install the following programs:
+
+  \`\`\`
+  ${data.dependencies}
+  \`\`\`
+
+  ## Usage
+
+  ${data.usage}
+
+  ${renderLicenseSection(data.license)}
+
+  ## Contributors
+
+  ${data.contributors}
 
 `;
 }
